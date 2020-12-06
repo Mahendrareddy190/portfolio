@@ -1,0 +1,271 @@
+.home {
+  background-color: #2f363f;
+  height: 100%;
+  min-height: 722px;
+  width:100%;
+  display:flex;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: inline-block;
+}
+.text1 {
+  color: white;
+  margin-left: 100px;
+  margin-top: 50px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+}
+.text2 {
+    color: white;
+  margin-top: 40px;
+  margin-left:150px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+   
+}
+.text3 {
+  display: flex;
+  color: white;
+  height: 40px;
+  margin-top: 80px;
+  margin-left: 160px;
+  font-size: 50px;
+}
+.highlight {
+  text-shadow: 2px 2px #e74292;
+  color: rgb(122, 224, 241);
+  font-size: 55px;
+  display: inline-block;
+  display: flex;
+}
+.text4 {
+  display: flex;
+  color: white;
+  margin-left: 160px;
+  font-size: 50px;
+}
+.text5 {
+  display: flex;
+  opacity: 0.2;
+  color: white;
+  margin-left: 160px;
+  font-size: 20px;
+}
+.bttext2 {
+  color: white;
+  margin-left: 150px;
+  margin-top: 100px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+}
+.bttext1 {
+  margin-top: 30px;
+  margin-left: 100px;
+  color: white;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+}
+
+/* 
+@media (min-width: 768px) {
+  .home {
+    background-color: #2f363f;
+    height: 100px;
+    min-height: 652px;
+     
+    display: inline-block;
+  }
+
+  .bttext2 {
+    color: white;
+    margin-left: 150px;
+     
+    opacity: 0.2;
+    font-family: "Helvetica Neue";
+  }
+  .bttext1 {
+    margin-top: 30px;
+    margin-left: 100px;
+    color: white;
+    opacity: 0.2;
+    font-family: "Helvetica Neue";
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    background-color: #2f363f;
+    height: 100px;
+    min-height: 652px;
+     
+    display: inline-block;
+  }
+
+  .bttext2 {
+    color: white;
+    margin-left: 150px;
+     
+    opacity: 0.2;
+    font-family: "Helvetica Neue";
+  }
+  .bttext1 {
+    margin-top: 30px;
+    margin-left: 100px;
+    color: white;
+    opacity: 0.2;
+    font-family: "Helvetica Neue";
+  }
+} */
+
+@media (max-width:320px) {
+    .home {
+  background-color: #2f363f;
+  height: 1420px;
+   width:700px;
+  display:flex;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: inline-block;
+}
+.text1 {
+  color: white;
+  margin-left:100px;
+  margin-top: 200px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size:30px;
+}
+.text2 {
+    color: white;
+  margin-top: 40px;
+  margin-left:150px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size:30px;
+}
+.text3 {
+  display: flex;
+  color: white;
+  height: 40px;
+  margin-top: 250px;
+  margin-left: 160px;
+  font-size: 50px;
+}
+.highlight {
+  text-shadow: 2px 2px #e74292;
+  color: rgb(122, 224, 241);
+  font-size: 55px;
+  display: inline-block;
+  display: flex;
+}
+.text4 {
+  display: flex;
+  color: white;
+  margin-left: 160px;
+  font-size: 50px;
+
+}
+.text5 {
+  display: flex;
+  opacity: 0.2;
+  color: white;
+  margin-left: 160px;
+  font-size: 30px;
+}
+.bttext2 {
+  color: white;
+  margin-left: 150px;
+  margin-top: 400px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+}
+.bttext1 {
+  margin-top: 30px;
+  margin-left: 100px;
+  color: white;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+}
+}
+
+
+@media (max-width:425px){
+    .home {
+  background-color: #2f363f;
+  height: 1420px;
+  /* min-height:100px; */
+  width:700px;
+  display:flex;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: inline-block;
+}
+.text1 {
+  color: white;
+  margin-left:100px;
+  margin-top: 200px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size:30px;
+}
+.text2 {
+    color: white;
+  margin-top: 40px;
+  margin-left:150px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size:30px;
+}
+.text3 {
+  display: flex;
+  color: white;
+  height: 40px;
+  margin-top: 250px;
+  margin-left: 150px;
+  font-size: 50px;
+}
+.highlight {
+  text-shadow: 2px 2px #e74292;
+  color: rgb(122, 224, 241);
+  font-size: 55px;
+  display: inline-block;
+  display: flex;
+}
+.text4 {
+  display: flex;
+  color: white;
+  margin-left: 160px;
+  font-size: 50px;
+
+}
+.text5 {
+  display: flex;
+  opacity: 0.2;
+  color: white;
+  margin-left: 160px;
+  font-size: 30px;
+}
+.bttext2 {
+  color: white;
+  margin-left: 150px;
+  margin-top: 400px;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+}
+.bttext1 {
+  margin-top: 30px;
+  margin-left: 100px;
+  color: white;
+  opacity: 0.2;
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+}
+}
