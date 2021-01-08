@@ -9,11 +9,6 @@ const App = () => {
       <div className="app">
       <Switch>
         <Route path="/">
-          <Header/>
-          <Home />
-        </Route>
-        <Route path="/home">
-          <Header/>
           <Home />
         </Route>
       </Switch>
