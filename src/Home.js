@@ -6,16 +6,17 @@ import AOS from "aos";
 import profile from "./images/mahi.jpg";
 import profile1 from "./images/mahi1.PNG";
 import work from "./images/work1.jpg";
+import project1 from "./images/project1.png";
+import project2 from "./images/project2.png";
 import emailjs from "emailjs-com";
 import { useAlert } from "react-alert";
 import Typed from "react-typed";
-// import './js/slider'
-// import Glide from "@glidejs/glide"
 import { useEffect } from "react";
+
 const Home = () => {
   function sendEmail(e) {
     e.preventDefault();
-
+    console.log("helo mahi", e.target);
     emailjs
       .sendForm(
         "service_7f4e33j",
@@ -36,14 +37,6 @@ const Home = () => {
 
   const alert = useAlert();
   useEffect(() => {
-    // const typed=new Typed(".typing", {
-    //   strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-    //   typeSpeed: 100,
-    //   backSpeed: 60,
-    //   loop: true,
-
-    // }
-    // );
     const navOpen = document.querySelector(".hamburger");
     const navContainer = document.querySelector(".nav-menu");
     const navList = document.querySelector(".nav-list");
@@ -61,7 +54,7 @@ const Home = () => {
 
     // Fix Navbar
     const navBar = document.querySelector(".navigation");
-    const topLink = document.querySelector(".goto-top");
+    // const topLink = document.querySelector(".goto-top");
     window.addEventListener("scroll", () => {
       const navHeight = navBar.getBoundingClientRect().height;
       const scrollHeight = window.pageYOffset;
@@ -124,15 +117,6 @@ const Home = () => {
       stagger: 0.2,
     });
     AOS.init();
-    // $(document).ready(function(){
-
-    // var typed = new Typed(".typing-2", {
-    //   strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-    //   typeSpeed: 100,
-    //   backSpeed: 60,
-    //   loop: true,
-    // });
-    // });
   }, []);
   const Home_jsx = () => {
     return (
@@ -193,24 +177,21 @@ const Home = () => {
             </nav>
           </div>
 
-          <div className="row">
-            <div
-              className="col-lg-6 col-md-4 col-sm-4 pl-5  offset-md-1 headercontent"
-              // style={{ marginLeft: "160px" }}
-            >
+          <div className="row w-100">
+            <div className="col-lg-6 col-md-4 col-sm-4 pl-5  offset-md-1 headercontent">
               <div className="hero container">
                 <div>
                   <h1>
-                    Hello,I'm <span>Maheswar Reddy</span> <br />
-                    {/* <div class="text-3"> */}
+                    Hello,I'm <span>Mahendra Reddy</span> <br />
                     And I'm a{" "}
                     <Typed
                       strings={[
                         "",
                         "",
-                        "FUllStack web developer at jvt.",
+                        // "FUllStack web developer at jvt.",
                         "Blogger.",
                         "Freelancer.",
+                        "Web Developer",
                       ]}
                       typeSpeed={100}
                     />
@@ -243,7 +224,7 @@ const Home = () => {
                   data-aos="fade-left"
                   data-aos-duration="2000"
                   src={profile1}
-                  alt=""
+                  alt="m"
                 />
               </div>
             </div>
@@ -272,15 +253,15 @@ const Home = () => {
 
               <div className="count">
                 <div className="count-1">
-                  <span>235</span>
+                  <span>0</span>
                   <p>Clients worldwide</p>
                 </div>
                 <div className="count-2">
-                  <span>70</span>
+                  <span>0</span>
                   <p>Awards</p>
                 </div>
                 <div className="count-3">
-                  <span>640</span>
+                  <span>24</span>
                   <p>Hours worked</p>
                 </div>
               </div>
@@ -292,7 +273,8 @@ const Home = () => {
             >
               <img
                 src={profile}
-                style={{ width: "400px", height: "400px", marginLeft: "150px" }}
+                alt="mahi"
+                style={{ width: "450px", height: "450px", marginLeft: "100px" }}
               />
             </div>
           </div>
@@ -301,7 +283,7 @@ const Home = () => {
         <section className="section services" id="services">
           <div className="services-center container">
             <div className="top">
-              <div className="subtitle">What we love to Do!</div>
+              <div className="subtitle pt-md-1">What we love to Do!</div>
               <h2 className="title">Our affordable services</h2>
               <p>
                 Our expert team member has a lot of specialty, but what we love
@@ -325,10 +307,16 @@ const Home = () => {
                       </p>
                     </div>
                   </li>
-                  <div className="row">
-                    <div className="col-3">
+                  <div
+                    className="row"
+                    style={{
+                      objectFit: "contain",
+                      backgroundPosition: "cover",
+                    }}
+                  >
+                    <div className="col-lg-3  col-md-4 pb-4">
                       <li className="glide__slide">
-                        <div className="service">
+                        <div className="service ">
                           <span>
                             <i className="fas fa-paint-brush"></i>
                           </span>
@@ -341,7 +329,7 @@ const Home = () => {
                       </li>
                     </div>
 
-                    <div className="col-3">
+                    <div className="col-lg-3  col-md-4 pb-4">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -356,7 +344,7 @@ const Home = () => {
                       </li>
                     </div>
 
-                    <div className="col-3">
+                    <div className="col-lg-3  col-md-4 pb-4">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -370,7 +358,7 @@ const Home = () => {
                         </div>
                       </li>
                     </div>
-                    <div className="col-3">
+                    <div className="col-lg-3  col-md-4">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -396,50 +384,32 @@ const Home = () => {
           </div>
         </section>
 
-        <section class="section portfolio" id="portfolio">
-          <div class="portfolio-center container">
-            <div class="top">
-              <div class="subtitle">Work We Completed</div>
-              <h2 class="title">Our Portfolio</h2>
+        <section className="section portfolio" id="portfolio" name="mahiport">
+          <div className="portfolio-center container">
+            <div className="top">
+              <div className="subtitle">Work We Completed</div>
+              <h2 className="title">Our Portfolio</h2>
               <p>
                 We worked with lots of things & we don't upload everything here.
                 But we really love to share some of our favorite works which you
                 can see in below!
               </p>
             </div>
-
-            <div class="portfolio-container">
-              <div class="single" data-aos="fade-down" data-aos-duration="2000">
-                <img src={work} alt="" />
-                <div class="overlay">
-                  <div class="details">
-                    <h3>Custom website build from scratch using WordPress</h3>
-                    <div class="btn-group">
-                      <a href="">
-                        <i class="fas fa-plus"></i>
-                      </a>
-                      <a href="">
-                        <i class="fas fa-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div className="portfolio-container">
               <div
-                class="single"
-                data-aos="fade-right"
+                className="single"
+                data-aos="fade-down"
                 data-aos-duration="2000"
               >
-                <img src={work} alt="" />
-                <div class="overlay">
-                  <div class="details">
-                    <h3>Psd to HTML slicing</h3>
-                    <div class="btn-group">
-                      <a href="">
+                <img src={project1} alt="m" />
+                <div className="overlay">
+                  <div className="details">
+                    <h3> website build using React</h3>
+                    <div className="btn-group">
+                      <a href="/">
                         <i className="fas fa-plus"></i>
                       </a>
-                      <a href="">
+                      <a href="https://attendance-a-z.web.app/">
                         <i className="fas fa-link"></i>
                       </a>
                     </div>
@@ -449,18 +419,38 @@ const Home = () => {
 
               <div
                 className="single"
+                data-aos="fade-right"
+                data-aos-duration="2000"
+              >
+                <img src={project2} alt="project1" />
+                <div className="overlay">
+                  <div className="details">
+                    <h3>website build using React</h3>
+                    <div className="btn-group">
+                      <a href="/">
+                        <i className="fas fa-plus"></i>
+                      </a>
+                      <a href="https://weather-forecast-wp.web.app/">
+                        <i className="fas fa-link"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="single"
                 data-aos="fade-left"
                 data-aos-duration="2000"
               >
-                <img src={work} alt="" />
+                <img src={work} alt="m" />
                 <div className="overlay">
                   <div className="details">
                     <h3>Psd design</h3>
                     <div className="btn-group">
-                      <a href="">
+                      <a href="/">
                         <i className="fas fa-plus"></i>
                       </a>
-                      <a href="">
+                      <a href="/">
                         <i className="fas fa-link"></i>
                       </a>
                     </div>
@@ -478,48 +468,10 @@ const Home = () => {
                   <div className="details">
                     <h3>Custom website build</h3>
                     <div className="btn-group">
-                      <a href="">
+                      <a href="/">
                         <i className="fas fa-plus"></i>
                       </a>
-                      <a href="">
-                        <i className="fas fa-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="single"
-                data-aos="flip-right"
-                data-aos-duration="2000"
-              >
-                <img src={work} alt="" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3>Redesign website</h3>
-                    <div className="btn-group">
-                      <a href="">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="">
-                        <i className="fas fa-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="single" data-aos="flip-up" data-aos-duration="2000">
-                <img src={work} alt="" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3>Design a website with WordPress</h3>
-                    <div className="btn-group">
-                      <a href="">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="">
+                      <a href="/">
                         <i className="fas fa-link"></i>
                       </a>
                     </div>
@@ -530,10 +482,10 @@ const Home = () => {
           </div>
         </section>
 
-        <section class="section contact" id="contact">
-          <div class="contact-center container">
+        <section className="section contact" id="contact">
+          <div className="contact-center container">
             <div
-              class="left"
+              className="left"
               data-aos="fade-down-right"
               data-aos-duration="2000"
             >
@@ -547,30 +499,34 @@ const Home = () => {
                 Note: we can't spam you with lots of messages. We hate to send
                 spam messages of our valuable clients.
               </p>
-              <div class="bottom">
+              <div className="bottom">
                 <div>
                   <span>
-                    <i class="fas fa-map-marked-alt"></i>
+                    <i className="fas fa-map-marked-alt"></i>
                   </span>
                   <h4>Location</h4>
                   <small>Andha Pradesh,India</small>
                 </div>
                 <div>
                   <span>
-                    <i class="far fa-envelope-open"></i>
+                    <i className="far fa-envelope-open"></i>
                   </span>
                   <h4>Email</h4>
-                  <small>maheswarreddyperam@gmail.com</small>
+                  <small>perammahendra60@gmail.com</small>
                 </div>
               </div>
             </div>
 
-            <div class="right" data-aos="fade-up-left" data-aos-duration="2000">
-              <div class="contact">
+            <div
+              className="right"
+              data-aos="fade-up-left"
+              data-aos-duration="2000"
+            >
+              <div className="contact">
                 Message Me
                 <form onSubmit={sendEmail}>
-                  <div class="fields">
-                    <div class="field name">
+                  <div className="fields">
+                    <div className="field name">
                       <input
                         type="text"
                         placeholder="Name"
@@ -578,7 +534,7 @@ const Home = () => {
                         name="name"
                       />
                     </div>
-                    <div class="field email">
+                    <div className="field email">
                       <input
                         type="email"
                         placeholder="Email"
@@ -587,7 +543,7 @@ const Home = () => {
                       />
                     </div>
                   </div>
-                  <div class="field">
+                  <div className="field">
                     <input
                       type="text"
                       placeholder="Subject"
@@ -595,7 +551,7 @@ const Home = () => {
                       name="subject"
                     />
                   </div>
-                  <div class="field textarea">
+                  <div className="field textarea">
                     <textarea
                       cols="30"
                       rows="10"
@@ -604,7 +560,7 @@ const Home = () => {
                       required
                     ></textarea>
                   </div>
-                  <div class="button">
+                  <div className="button">
                     <button type="submit">Send message</button>
                   </div>
                 </form>
@@ -616,12 +572,6 @@ const Home = () => {
         <footer>
           <p>&copy; mahi Template. 2020 All right reserved!</p>
         </footer>
-
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script> */}
-        {/* <script src="./js/slider.js"></script>
-<script src="./js/index.js"></script> */}
       </div>
     );
   };
