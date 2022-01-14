@@ -26,6 +26,7 @@
     "react-spinners": "^0.10.4",
     "react-typed": "^1.2.0",
     "scroll": "^3.0.1",
+    "sortablejs": "^1.14.0",
     "typed": "^0.3.3",
     "web-vitals": "^0.2.4"
   },

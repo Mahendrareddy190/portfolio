@@ -12,25 +12,37 @@ import emailjs from "emailjs-com";
 import { useAlert } from "react-alert";
 import Typed from "react-typed";
 import { useEffect } from "react";
+// import Draggable from "react-draggable";
 
-const Home = () => {
+const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
+  if (name) {
+    document.getElementById("text").value = name;
+  }
+  if (email) {
+    document.getElementById("text1").value = email;
+  }
+  if (subject) {
+    document.getElementById("text2").value = subject;
+  }
+  if (message) {
+    document.getElementById("text3").value = message;
+  }
   function sendEmail(e) {
     e.preventDefault();
     console.log("helo mahi", e.target);
     emailjs
       .sendForm(
-        "service_7f4e33j",
-        "template_yw1523m",
+        "service_7zj3s5v",
+        "template_lb7ed4b",
         e.target,
-        "user_ZVE6kaaWoren7oRSg7S3c"
+        "user_WQoMoQbWCP5Sc7DE3QWd2"
       )
       .then(
         (result) => {
           alert.success("Sent Successfully");
-          console.log("mahireddy", result.text);
         },
         (error) => {
-          console.log("email.js errors", error.text);
+          alert.error("Failed to sent");
         }
       );
   }
@@ -63,12 +75,6 @@ const Home = () => {
       } else {
         navBar.classList.remove("fix-nav");
       }
-
-      // if (scrollHeight > 500) {
-      //   topLink.classList.add("show");
-      // } else {
-      //   topLink.classList.remove("show");
-      // }
     });
 
     // Smooth Scroll
@@ -151,19 +157,13 @@ const Home = () => {
 
                   <li className="nav-item">
                     <a href="#services" className="nav-link scroll-link">
-                      Services
+                      Skills
                     </a>
                   </li>
 
                   <li className="nav-item">
                     <a href="#portfolio" className="nav-link scroll-link">
                       Portfolio
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a href="#blog" className="nav-link scroll-link">
-                      Blog
                     </a>
                   </li>
 
@@ -231,7 +231,7 @@ const Home = () => {
           </div>
         </header>
 
-        <section className="section about" id="about">
+        <section className="section about" id="about" ref={goto}>
           <div className="about-center container">
             <div
               className="left"
@@ -280,11 +280,11 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="section services" id="services">
+        <section className="section services" id="services" ref={gos}>
           <div className="services-center container">
             <div className="top">
               <div className="subtitle pt-md-1">What we love to Do!</div>
-              <h2 className="title">Our affordable services</h2>
+              <h2 className="title">Our affordable Skills</h2>
               <p>
                 Our expert team member has a lot of specialty, but what we love
                 to do most of the time I a real question! Here are the things we
@@ -296,7 +296,7 @@ const Home = () => {
               <div className="glide__track" data-glide-el="track">
                 <ul className="glide__glide__slides">
                   <li className="glide__slide">
-                    <div classname="glide__service">
+                    <div className="glide__service">
                       <span>
                         <i className="fas fa-mobile-alt"></i>
                       </span>
@@ -314,7 +314,13 @@ const Home = () => {
                       backgroundPosition: "cover",
                     }}
                   >
-                    <div className="col-lg-3  col-md-4 pb-4">
+                    {/* <Draggable
+                      handle=".handle"
+                      defaultPosition={{ x: 0, y: 0 }}
+                      position={null}
+                      scale={1}
+                    > */}
+                    <div className="col-lg-3  col-md-4 pb-4 handle">
                       <li className="glide__slide">
                         <div className="service ">
                           <span>
@@ -328,8 +334,15 @@ const Home = () => {
                         </div>
                       </li>
                     </div>
-
-                    <div className="col-lg-3  col-md-4 pb-4">
+                    {/* </Draggable> */}
+                    {/* <Draggable
+                      handle=".handle"
+                      defaultPosition={{ x: 0, y: 0 }}
+                      position={null}
+                      grid={[5, 5]}
+                      scale={1}
+                    > */}
+                    <div className="col-lg-3  col-md-4 pb-4 handle">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -343,7 +356,8 @@ const Home = () => {
                         </div>
                       </li>
                     </div>
-
+                    {/* </Draggable> */}
+                    {/* <Draggable> */}
                     <div className="col-lg-3  col-md-4 pb-4">
                       <li className="glide__slide">
                         <div className="service">
@@ -358,6 +372,8 @@ const Home = () => {
                         </div>
                       </li>
                     </div>
+                    {/* </Draggable> */}
+                    {/* <Draggable> */}
                     <div className="col-lg-3  col-md-4">
                       <li className="glide__slide">
                         <div className="service">
@@ -372,6 +388,7 @@ const Home = () => {
                         </div>
                       </li>
                     </div>
+                    {/* </Draggable> */}
                   </div>
                 </ul>
               </div>
@@ -384,7 +401,12 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="section portfolio" id="portfolio" name="mahiport">
+        <section
+          className="section portfolio"
+          id="portfolio"
+          name="mahiport"
+          ref={go}
+        >
           <div className="portfolio-center container">
             <div className="top">
               <div className="subtitle">Work We Completed</div>
@@ -396,94 +418,108 @@ const Home = () => {
               </p>
             </div>
             <div className="portfolio-container">
-              <div
-                className="single"
-                data-aos="fade-down"
-                data-aos-duration="2000"
-              >
-                <img src={project1} alt="m" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3> website build using React</h3>
-                    <div className="btn-group">
-                      <a href="/">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="https://attendance-a-z.web.app/">
-                        <i className="fas fa-link"></i>
-                      </a>
+              {/* <Draggable> */}
+              <div>
+                <div
+                  className="single"
+                  data-aos="fade-down"
+                  data-aos-duration="2000"
+                >
+                  <img src={project1} alt="m" />
+                  <div className="overlay">
+                    <div className="details">
+                      <h3> website build using React</h3>
+                      <div className="btn-group">
+                        <a href="/">
+                          <i className="fas fa-plus"></i>
+                        </a>
+                        <a href="https://attendance-a-z.web.app/">
+                          <i className="fas fa-link"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div
-                className="single"
-                data-aos="fade-right"
-                data-aos-duration="2000"
-              >
-                <img src={project2} alt="project1" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3>website build using React</h3>
-                    <div className="btn-group">
-                      <a href="/">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="https://weather-forecast-wp.web.app/">
-                        <i className="fas fa-link"></i>
-                      </a>
+              {/* </Draggable> */}
+              {/* <Draggable> */}
+              <div>
+                <div
+                  className="single"
+                  data-aos="fade-right"
+                  data-aos-duration="2000"
+                >
+                  <img src={project2} alt="project1" />
+                  <div className="overlay">
+                    <div className="details">
+                      <h3>website build using React</h3>
+                      <div className="btn-group">
+                        <a href="/">
+                          <i className="fas fa-plus"></i>
+                        </a>
+                        <a href="https://weather-forecast-wp.web.app/">
+                          <i className="fas fa-link"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="single"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-              >
-                <img src={work} alt="m" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3>Psd design</h3>
-                    <div className="btn-group">
-                      <a href="/">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fas fa-link"></i>
-                      </a>
+              {/* </Draggable> */}
+              {/* <Draggable> */}
+              <div>
+                <div
+                  className="single"
+                  data-aos="fade-left"
+                  data-aos-duration="2000"
+                >
+                  <img src={work} alt="m" />
+                  <div className="overlay">
+                    <div className="details">
+                      <h3>Psd design</h3>
+                      <div className="btn-group">
+                        <a href="/">
+                          <i className="fas fa-plus"></i>
+                        </a>
+                        <a href="/">
+                          <i className="fas fa-link"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div
-                className="single"
-                data-aos="flip-up"
-                data-aos-duration="2000"
-              >
-                <img src={work} alt="" />
-                <div className="overlay">
-                  <div className="details">
-                    <h3>Custom website build</h3>
-                    <div className="btn-group">
-                      <a href="/">
-                        <i className="fas fa-plus"></i>
-                      </a>
-                      <a href="/">
-                        <i className="fas fa-link"></i>
-                      </a>
+              {/* </Draggable> */}
+              {/* <Draggable> */}
+              <div>
+                <div
+                  className="single"
+                  data-aos="flip-up"
+                  data-aos-duration="2000"
+                >
+                  <img src={work} alt="" />
+                  <div className="overlay">
+                    <div className="details">
+                      <h3>Custom website build</h3>
+                      <div className="btn-group">
+                        <a href="/">
+                          <i className="fas fa-plus"></i>
+                        </a>
+                        <a href="/">
+                          <i className="fas fa-link"></i>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              {/* </Draggable> */}
             </div>
           </div>
         </section>
 
         <section className="section contact" id="contact">
-          <div className="contact-center container">
+          <div className="contact-center container" ref={con}>
             <div
               className="left"
               data-aos="fade-down-right"
@@ -529,15 +565,17 @@ const Home = () => {
                     <div className="field name">
                       <input
                         type="text"
-                        placeholder="Name"
+                        placeholder=" Your Name"
                         required
+                        id="text"
                         name="name"
                       />
                     </div>
                     <div className="field email">
                       <input
                         type="email"
-                        placeholder="Email"
+                        id="text1"
+                        placeholder="Your Email"
                         required
                         name="email"
                       />
@@ -546,6 +584,7 @@ const Home = () => {
                   <div className="field">
                     <input
                       type="text"
+                      id="text2"
                       placeholder="Subject"
                       required
                       name="subject"
@@ -555,6 +594,7 @@ const Home = () => {
                     <textarea
                       cols="30"
                       rows="10"
+                      id="text3"
                       placeholder="Message.."
                       name="message"
                       required
