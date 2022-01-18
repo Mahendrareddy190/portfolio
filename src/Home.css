@@ -53,6 +53,9 @@ ul {
   list-style: none;
 }
 
+ul li{
+  margin-left: 24px;
+}
 img {
   max-width: 100%;
 }
@@ -67,29 +70,11 @@ img {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 1200px) {
-  .container {
-    padding: 0 3rem;
-  }
-}
-
-@media only screen and (max-width: 996px) {
-  .container {
-    padding: 0 12rem;
-  }
-}
-
-@media only screen and (max-width: 567px) {
-  .container {
-    padding: 0 3rem;
-  }
-}
-
 .header {
   position: relative;
   background-color: var(--black);
   height: calc(100vh - 2rem);
-  width: 1518px;
+  width: 100%;
   background: url("./images/521147.jpg") center/cover no-repeat fixed;
   z-index:1000;
 }
@@ -107,7 +92,12 @@ img {
     width:1520;
   }
 }
-
+@media only screen and (min-width:1400px) {
+  .header {
+    height: 100vh;
+    width:100%;
+  }
+}
   
 
 .header::after {
@@ -155,6 +145,7 @@ img {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   z-index: 100;
+ 
 }
 
 .logo {
@@ -164,6 +155,7 @@ img {
 .logo h1 {
   font-size: 3rem;
   font-weight: 700;
+  margin: 0 0 0 20px;
   color: var(--white);
   font-style: italic;
 }
@@ -262,13 +254,13 @@ img {
 
 /* HERO */
 .hero {
-  margin-top: 12rem;
+  margin-top: 20rem;
   height: 100%;
   /* display: inline-block; */
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 1.2;
   font-weight: 800;
   color: var(--white);
@@ -281,18 +273,23 @@ img {
 .hero p {
   color: var(--white);
   font-size: 1.4rem;
-  margin-top: 3rem;
-  width: 45%;
+  margin-top: 5rem;
+  width: 100%;
 }
 .bannerimg {
   height: 300px;
   width: 300px;
+  display: flex;
+  
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .bannerimg {
     visibility: hidden;
   }
 }
+ 
+ 
+
 
 .hero .btn-group {
   margin-top:3rem;
@@ -339,7 +336,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 6rem;
+    font-size: 3rem;
   }
 
   .hero p {
@@ -349,13 +346,13 @@ img {
  
 @media only screen and (max-width: 768px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (max-width: 567px) {
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   
@@ -379,7 +376,7 @@ img {
   margin-top: 5rem;
   padding: 8rem 0;
   overflow-x: hidden;
-  width:1518px;
+  width:100%;
 }
 @media (max-width: 500px) {
   .section{
@@ -908,8 +905,7 @@ footer {
   padding: 2rem;
   color: var(--white);
   text-align: center;
-  width: 1518px;
-  background-position: cover;
+  width:100%;
 }
 @media (max-width:500px) {
   footer {

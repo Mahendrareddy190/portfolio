@@ -140,7 +140,6 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <i className="fas fa-bars"></i>
                 </div>
               </div>
-
               <div className="nav-menu d-flex">
                 <ul className="nav-list d-flex">
                   <li className="nav-item">
@@ -178,7 +177,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
           </div>
 
           <div className="row w-100">
-            <div className="col-lg-6 col-md-4 col-sm-4 pl-5  offset-md-1 headercontent">
+            <div className="col-lg-6 col-md-7 col-sm-12 w-100 pl-5 offset-md-1 offset-lg-1 headercontent">
               <div className="hero container">
                 <div>
                   <h1>
@@ -215,7 +214,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
               </div>
             </div>
             <div
-              className="col-lg-5 col-md-4 pr-5 pt-5 "
+              className="col-lg-3 col-md-2 pl-5  pt-5 "
               style={{ marginTop: "100px" }}
             >
               <div>
