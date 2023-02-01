@@ -280,7 +280,12 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
           </div>
         </section>
 
-        <section className="section services" id="services" ref={gos}>
+        <section
+          className="section services"
+          style={{ overflowY: "hidden" }}
+          id="services"
+          ref={gos}
+        >
           <div className="services-center container">
             <div className="top">
               <div className="subtitle pt-md-1">What we love to Do!</div>
@@ -307,13 +312,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                       </p>
                     </div>
                   </li>
-                  <div
-                    className="row"
-                    style={{
-                      objectFit: "contain",
-                      backgroundPosition: "cover",
-                    }}
-                  >
+                  <div className="row skillrow">
                     {/* <Draggable
                       handle=".handle"
                       defaultPosition={{ x: 0, y: 0 }}
@@ -342,7 +341,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                       grid={[5, 5]}
                       scale={1}
                     > */}
-                    <div className="col-lg-3  col-md-4 pb-4 handle">
+                    <div className="col-lg-3  col-md-4 pb-4 handle col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -358,7 +357,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     </div>
                     {/* </Draggable> */}
                     {/* <Draggable> */}
-                    <div className="col-lg-3  col-md-4 pb-4">
+                    <div className="col-lg-3  col-md-4 pb-4 col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -374,7 +373,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     </div>
                     {/* </Draggable> */}
                     {/* <Draggable> */}
-                    <div className="col-lg-3  col-md-4">
+                    <div className="col-lg-3 col-md-4 pb-4 col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -388,7 +387,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                         </div>
                       </li>
                     </div>
-                    <div className="col-lg-3  col-md-4">
+                    <div className="col-lg-3  col-md-4 pb-4 col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -402,11 +401,11 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                         </div>
                       </li>
                     </div>
-                    <div className="col-lg-3  col-md-4">
+                    <div className="col-lg-3  col-md-4 pb-4 col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
-                            <i className="fas fa-pencil-alt"></i>
+                            <i className="fas fa-heart"></i>
                           </span>
                           <h3>NodeJs</h3>
                           <p>
@@ -416,7 +415,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                         </div>
                       </li>
                     </div>
-                    <div className="col-lg-3  col-md-4">
+                    <div className="col-lg-3  col-md-4  pb-4 col-sm">
                       <li className="glide__slide">
                         <div className="service">
                           <span>
@@ -470,7 +469,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <img src={project1} alt="m" />
                   <div className="overlay">
                     <div className="details">
-                      <h3> website build using React</h3>
+                      <h3>Attendance management with Mern stack</h3>
                       <div className="btn-group">
                         <a href="/">
                           <i className="fas fa-plus"></i>
@@ -494,7 +493,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <img src={project2} alt="project1" />
                   <div className="overlay">
                     <div className="details">
-                      <h3>website build using React</h3>
+                      <h3>Weather forecast with ReactJs</h3>
                       <div className="btn-group">
                         <a href="/">
                           <i className="fas fa-plus"></i>
@@ -518,7 +517,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <img src={project3} alt="m" />
                   <div className="overlay">
                     <div className="details">
-                      <h3>Psd design</h3>
+                      <h3>Todo app with ReactJs</h3>
                       <div className="btn-group">
                         <a href="/">
                           <i className="fas fa-plus"></i>
