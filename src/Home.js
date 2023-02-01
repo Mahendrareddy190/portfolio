@@ -8,6 +8,8 @@ import profile1 from "./images/mahi1.PNG";
 import work from "./images/work1.jpg";
 import project1 from "./images/project1.png";
 import project2 from "./images/project2.png";
+import project3 from "./images/project3.png";
+
 import emailjs from "emailjs-com";
 import { useAlert } from "react-alert";
 import Typed from "react-typed";
@@ -29,7 +31,6 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
   }
   function sendEmail(e) {
     e.preventDefault();
-    console.log("helo mahi", e.target);
     emailjs
       .sendForm(
         "service_7zj3s5v",
@@ -299,9 +300,9 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                       <span>
                         <i className="fas fa-mobile-alt"></i>
                       </span>
-                      <h3>WORDPRES THEME</h3>
+                      <h3>React</h3>
                       <p>
-                        We build WordPres theme, maintaining all the WP rules &
+                        We build React theme, maintaining all the react rules &
                         standard, which is 100% valid, SEO friendly.
                       </p>
                     </div>
@@ -321,14 +322,14 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     > */}
                     <div className="col-lg-3  col-md-4 pb-4 handle">
                       <li className="glide__slide">
-                        <div className="service ">
+                        <div className="service">
                           <span>
                             <i className="fas fa-paint-brush"></i>
                           </span>
-                          <h3>PSD to HTML</h3>
+                          <h3>HTML & CSS</h3>
                           <p>
-                            Slicing PSD to HTML with proper way is a very
-                            important thing & we do it most efficient way.
+                            Slicing HTML & CSS with proper way is a very
+                            important thing & I do it most efficient way.
                           </p>
                         </div>
                       </li>
@@ -350,7 +351,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <h3>Javascript</h3>
                           <p>
                             Javascript is the #1 programming language at this
-                            moment & we know it very well.
+                            moment & I know it very well.
                           </p>
                         </div>
                       </li>
@@ -363,10 +364,10 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <span>
                             <i className="far fa-image"></i>
                           </span>
-                          <h3>Website design</h3>
+                          <h3>Python</h3>
                           <p>
-                            Design a website is a most important part of
-                            building a website & we do it professionally.
+                            Python is the #1 programming language at this moment
+                            & I know it very well.
                           </p>
                         </div>
                       </li>
@@ -377,12 +378,54 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                       <li className="glide__slide">
                         <div className="service">
                           <span>
+                            <i className="fas fa-heart"></i>
+                          </span>
+                          <h3>ReactJs</h3>
+                          <p>
+                            ReactJs is our love & I can build awesome custom
+                            made website using this #1.
+                          </p>
+                        </div>
+                      </li>
+                    </div>
+                    <div className="col-lg-3  col-md-4">
+                      <li className="glide__slide">
+                        <div className="service">
+                          <span>
                             <i className="fas fa-pencil-alt"></i>
                           </span>
-                          <h3>Custom WordPress</h3>
+                          <h3>ExpressJS</h3>
                           <p>
-                            WordPress is our love & we can build awesome custom
-                            made website using this #1 CMS
+                            ExpressJS is a one of the top framework at this
+                            moment & I know it very well.
+                          </p>
+                        </div>
+                      </li>
+                    </div>
+                    <div className="col-lg-3  col-md-4">
+                      <li className="glide__slide">
+                        <div className="service">
+                          <span>
+                            <i className="fas fa-pencil-alt"></i>
+                          </span>
+                          <h3>NodeJs</h3>
+                          <p>
+                            NodeJS is a one of the popular Javascript runtime
+                            environment at this moment & I know it very well.
+                          </p>
+                        </div>
+                      </li>
+                    </div>
+                    <div className="col-lg-3  col-md-4">
+                      <li className="glide__slide">
+                        <div className="service">
+                          <span>
+                            <i className="fas fa-pencil-alt"></i>
+                          </span>
+                          <h3>MONGODB</h3>
+                          <p>
+                            MONGODb is a one of the top DB at this moment & I
+                            know it very well.
                           </p>
                         </div>
                       </li>
@@ -472,7 +515,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   data-aos="fade-left"
                   data-aos-duration="2000"
                 >
-                  <img src={work} alt="m" />
+                  <img src={project3} alt="m" />
                   <div className="overlay">
                     <div className="details">
                       <h3>Psd design</h3>
@@ -480,7 +523,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                         <a href="/">
                           <i className="fas fa-plus"></i>
                         </a>
-                        <a href="/">
+                        <a href="https://doit-35801.web.app/">
                           <i className="fas fa-link"></i>
                         </a>
                       </div>
