@@ -185,21 +185,14 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     Hello,I'm <span>Mahendra Reddy</span> <br />
                     And I'm a{" "}
                     <Typed
-                      strings={[
-                        "",
-                        "",
-                        // "FUllStack web developer at jvt.",
-                        "Blogger.",
-                        "Freelancer.",
-                        "Web Developer",
-                      ]}
+                      strings={["", " ", "Web Developer"]}
                       typeSpeed={100}
                     />
                     {/* </div> */}
                   </h1>
                   <p>
-                    We design & develop a website using the latest technologies.
-                    Our design is unique, also the code is valid. We do
+                    I design & develop a website using the latest technologies.
+                    Our design is unique, also the code is valid. I do
                     everything with a professional touch.
                   </p>
                 </div>
@@ -241,21 +234,16 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
               <div className="subtitle">Warm welcome!</div>
               <h2 className="title">About Mahi</h2>
               <p>
-                Jurado team has a lot of awesome people who dedicate their time
-                to make some creative things & us really proud of that. Mostly
-                we do web design & development work based on WordPress
+                I spend my time creating creative things, and I take great pride
+                in my work. Primarily, I am involved in web design and
+                development, where I work with various tech stacks to build
+                innovative websites and applications
               </p>
-              <p className="top">
-                We are working with the Wordpress very beginning of the time.
-                Our expert team is very well known, this framework. We love to
-                build a website using WordPress.
-              </p>
-
               <div className="count">
-                <div className="count-1">
+                {/* <div className="count-1">
                   <span>0</span>
                   <p>Clients worldwide</p>
-                </div>
+                </div> */}
                 <div className="count-2">
                   <span>0</span>
                   <p>Awards</p>
@@ -288,12 +276,12 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
         >
           <div className="services-center container">
             <div className="top">
-              <div className="subtitle pt-md-1">What we love to Do!</div>
+              <div className="subtitle pt-md-1">What I love to Do!</div>
               <h2 className="title">Our affordable Skills</h2>
               <p>
-                Our expert team member has a lot of specialty, but what we love
-                to do most of the time I a real question! Here are the things we
-                really love to do!
+                I have a lot of specialty, but what I love to do most of the
+                time is a real question! Here are the things I really love to
+                do!
               </p>
             </div>
 
@@ -307,7 +295,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                       </span>
                       <h3>React</h3>
                       <p>
-                        We build React theme, maintaining all the react rules &
+                        I build React theme, maintaining all the react rules &
                         standard, which is 100% valid, SEO friendly.
                       </p>
                     </div>
@@ -350,7 +338,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <h3>Javascript</h3>
                           <p>
                             Javascript is the #1 programming language at this
-                            moment & I know it very well.
+                            moment
                           </p>
                         </div>
                       </li>
@@ -366,7 +354,6 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <h3>Python</h3>
                           <p>
                             Python is the #1 programming language at this moment
-                            & I know it very well.
                           </p>
                         </div>
                       </li>
@@ -396,7 +383,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <h3>ExpressJS</h3>
                           <p>
                             ExpressJS is a one of the top framework at this
-                            moment & I know it very well.
+                            moment
                           </p>
                         </div>
                       </li>
@@ -410,7 +397,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                           <h3>NodeJs</h3>
                           <p>
                             NodeJS is a one of the popular Javascript runtime
-                            environment at this moment & I know it very well.
+                            environment at this moment
                           </p>
                         </div>
                       </li>
@@ -450,12 +437,12 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
         >
           <div className="portfolio-center container">
             <div className="top">
-              <div className="subtitle">Work We Completed</div>
+              <div className="subtitle">Work I Completed</div>
               <h2 className="title">Our Portfolio</h2>
               <p>
-                We worked with lots of things & we don't upload everything here.
-                But we really love to share some of our favorite works which you
-                can see in below!
+                I have a lot of specialty, but what I love to do most of the
+                time is a real question! Here are the things I really love to
+                do!
               </p>
             </div>
             <div className="portfolio-container">
@@ -573,8 +560,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                 everything you need & possibly send some example you like.
               </p>
               <p>
-                Note: we can't spam you with lots of messages. We hate to send
-                spam messages of our valuable clients.
+                Note: We hate to send spam messages of our valuable clients.
               </p>
               <div className="bottom">
                 <div>
