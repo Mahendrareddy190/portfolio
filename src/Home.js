@@ -9,6 +9,7 @@ import work from "./images/work1.jpg";
 import project1 from "./images/project1.png";
 import project2 from "./images/project2.png";
 import project3 from "./images/project3.png";
+import project4 from "./images/project4.png";
 
 import emailjs from "emailjs-com";
 import { useAlert } from "react-alert";
@@ -201,9 +202,9 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <a href="#contact" className="btn btn1">
                     CONTACT US
                   </a>
-                  <a href="#contact" className="btn btn2">
+                  {/* <a href="#contact" className="btn btn2">
                     HIRE US
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -244,14 +245,14 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   <span>0</span>
                   <p>Clients worldwide</p>
                 </div> */}
-                <div className="count-2">
+                {/* <div className="count-2">
                   <span>0</span>
                   <p>Awards</p>
-                </div>
-                <div className="count-3">
+                </div> */}
+                {/* <div className="count-3">
                   <span>24</span>
                   <p>Hours worked</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div
@@ -458,7 +459,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     <div className="details">
                       <h3>Attendance management with Mern stack</h3>
                       <div className="btn-group">
-                        <a href="/">
+                        <a href="https://github.com/Mahendrareddy190/AttendenceFrontend">
                           <i className="fas fa-plus"></i>
                         </a>
                         <a href="https://attendance-a-z.web.app/">
@@ -482,7 +483,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     <div className="details">
                       <h3>Weather forecast with ReactJs</h3>
                       <div className="btn-group">
-                        <a href="/">
+                        <a href="https://github.com/Mahendrareddy190/weatherForecastFrontEnd">
                           <i className="fas fa-plus"></i>
                         </a>
                         <a href="https://weather-forecast-wp.web.app/">
@@ -506,7 +507,7 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                     <div className="details">
                       <h3>Todo app with ReactJs</h3>
                       <div className="btn-group">
-                        <a href="/">
+                        <a href="https://github.com/Mahendrareddy190/toDoApp_Frontend">
                           <i className="fas fa-plus"></i>
                         </a>
                         <a href="https://doit-35801.web.app/">
@@ -525,15 +526,15 @@ const Home = ({ goto, go, gos, con, name, email, subject, message }) => {
                   data-aos="flip-up"
                   data-aos-duration="2000"
                 >
-                  <img src={work} alt="" />
+                  <img src={project4} alt="" />
                   <div className="overlay">
                     <div className="details">
-                      <h3>Custom website build</h3>
+                      <h3>MeShow with reactjs</h3>
                       <div className="btn-group">
-                        <a href="/">
+                        <a href="#">
                           <i className="fas fa-plus"></i>
                         </a>
-                        <a href="/">
+                        <a href="https://github.com/Mahendrareddy190/MeshowFrontEnd">
                           <i className="fas fa-link"></i>
                         </a>
                       </div>
